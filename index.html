@@ -1,21 +1,31 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>World's Hardest Game</title>
-    <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
-  </head>
-  <body>
-    <object height="700" width="1350">
-      <param name="movie" value="worldshardestgame2.swf">
-      <embed src="worldshardestgame2.swf">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>World's Hardest Game</title>
+  <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+  <style>
+    /* Make the page fill the screen */
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      overflow: hidden; /* Prevent scrollbars */
+      background: black; /* Optional: background color for gaps */
+    }
+
+    object, embed {
+      width: 100%;
+      height: 100%;
+      display: block; /* Remove default inline spacing */
+    }
+  </style>
+</head>
+<body>
+  <object data="worldshardestgame2.swf" type="application/x-shockwave-flash">
+    <embed src="worldshardestgame2.swf" type="application/x-shockwave-flash">
     </embed>
-    </object>
-    <noscript>
-      <object height="700" width="1350">
-        <param name="movie" value="worldshardestgame2.swf">
-        <embed src="worldshardestgame2.swf">
-      </embed>
-      </object>
-    </noscript>
-  </body>
+  </object>
+</body>
 </html>
